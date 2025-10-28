@@ -1,6 +1,7 @@
 # === CORE BACKEND ===
 fastapi==0.115.0
 uvicorn==0.31.1
+python-multipart==0.0.9  # Required for file/form uploads
 
 # === DOCUMENT PARSING ===
 python-docx==1.1.2
