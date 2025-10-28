@@ -1,0 +1,24 @@
+{
+    "user_id": "student_001",
+    "completed_weeks": [
+        1
+    ],
+    "completed_videos": {
+        "1": [
+            "https://www.youtube.com/watch?v=RwfUgmOBLFQ",
+            "https://www.youtube.com/watch?v=qfckDdsEIq8",
+            "https://www.youtube.com/watch?v=lb3BZSfcnV8"
+        ]
+    },
+    "completed_books": {
+        "1": [
+            "Design and Analysis of Algorithms",
+            "Basic Concepts in Algorithm Design",
+            "DESIGN AND ANALYSIS OF ALGORITHMS"
+        ],
+        "2": [
+            "Approaching Asymptotics"
+        ]
+    },
+    "last_updated": "2025-10-22 18:09:56"
+}

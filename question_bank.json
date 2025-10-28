@@ -1,0 +1,203 @@
+{
+    "course_name": "Design and analysis of algorithms",
+    "course_code": "COMP 302/SOEN 302",
+    "generated_on": "2025-10-28 16:38:03",
+    "weeks": [
+        {
+            "week": 1,
+            "topic": "Week 1 Introduction: Algorithms, Pseudo code for expressing algorithms.",
+            "questions": [
+                {
+                    "type": "practice",
+                    "source": "GeeksforGeeks",
+                    "question": "Read and practice: Week 1 Introduction: Algorithms, Pseudo code for expressing algorithms.",
+                    "options": [],
+                    "answer": null,
+                    "reference_url": "https://www.geeksforgeeks.org/videos/category/java-w6y5f4/"
+                }
+            ]
+        },
+        {
+            "week": 2,
+            "topic": "Week 2 Performance analysis- Space complexity, Time Complexity, Asymptotic notation- Big oh notation, omega notation, theta notation and little oh notation.",
+            "questions": [
+                {
+                    "type": "practice",
+                    "source": "GeeksforGeeks",
+                    "question": "Read and practice: Week 2 Performance analysis- Space complexity, Time Complexity, Asymptotic notation- Big oh notation, omega notation, theta notation and little oh notation.",
+                    "options": [],
+                    "answer": null,
+                    "reference_url": "https://www.geeksforgeeks.org/courses/category/dsa-placements"
+                }
+            ]
+        },
+        {
+            "week": 3,
+            "topic": "Week 3 Divide and Conquer: General method. Applications- Binary search, Quick sort, merge sort, Strassen’s matrix multiplication.",
+            "questions": [
+                {
+                    "type": "practice",
+                    "source": "GeeksforGeeks",
+                    "question": "Read and practice: Week 3 Divide and Conquer: General method. Applications- Binary search, Quick sort, merge sort, Strassen’s matrix multiplication.",
+                    "options": [],
+                    "answer": null,
+                    "reference_url": "https://www.geeksforgeeks.org/courses/category/cloud-devops"
+                }
+            ]
+        },
+        {
+            "week": 4,
+            "topic": "Week 4 Disjoint set operations, Union and Find algorithms, AND/OR graphs, Connected components, Bi-connected components.",
+            "questions": [
+                {
+                    "type": "practice",
+                    "source": "GeeksforGeeks",
+                    "question": "Read and practice: Week 4 Disjoint set operations, Union and Find algorithms, AND/OR graphs, Connected components, Bi-connected components.",
+                    "options": [],
+                    "answer": null,
+                    "reference_url": "https://www.geeksforgeeks.org/system-design/system-design-tutorial/"
+                }
+            ]
+        },
+        {
+            "week": 5,
+            "topic": "Week 5 CAT 1",
+            "questions": [
+                {
+                    "type": "practice",
+                    "source": "GeeksforGeeks",
+                    "question": "Read and practice: Week 5 CAT 1",
+                    "options": [],
+                    "answer": null,
+                    "reference_url": "https://www.geeksforgeeks.org/courses/category/gate"
+                }
+            ]
+        },
+        {
+            "week": 6,
+            "topic": "Week 6 Greedy method: General method, applications- Job sequencing with deadlines, Knapsack problem, Spanning trees, Minimum cost spanning trees, Single source shortest path problem.",
+            "questions": [
+                {
+                    "type": "practice",
+                    "source": "GeeksforGeeks",
+                    "question": "Read and practice: Week 6 Greedy method: General method, applications- Job sequencing with deadlines, Knapsack problem, Spanning trees, Minimum cost spanning trees, Single source shortest path problem.",
+                    "options": [],
+                    "answer": null,
+                    "reference_url": "https://www.geeksforgeeks.org/courses/category/gate"
+                }
+            ]
+        },
+        {
+            "week": 7,
+            "topic": "Week 7 Dynamic Programming: General method, applications- Matrix chained multiplication, Optimal binary search trees, 0/1 Knapsack problem.",
+            "questions": [
+                {
+                    "type": "practice",
+                    "source": "GeeksforGeeks",
+                    "question": "Read and practice: Week 7 Dynamic Programming: General method, applications- Matrix chained multiplication, Optimal binary search trees, 0/1 Knapsack problem.",
+                    "options": [],
+                    "answer": null,
+                    "reference_url": "https://www.geeksforgeeks.org/legal/"
+                }
+            ]
+        },
+        {
+            "week": 8,
+            "topic": "Week 8 All pairs shortest path problem, Traveling sales person problem, Reliability design.",
+            "questions": [
+                {
+                    "type": "practice",
+                    "source": "GeeksforGeeks",
+                    "question": "Read and practice: Week 8 All pairs shortest path problem, Traveling sales person problem, Reliability design.",
+                    "options": [],
+                    "answer": null,
+                    "reference_url": "https://www.geeksforgeeks.org/courses/category/gate"
+                }
+            ]
+        },
+        {
+            "week": 9,
+            "topic": "Week 9 CAT 2",
+            "questions": [
+                {
+                    "type": "practice",
+                    "source": "GeeksforGeeks",
+                    "question": "Read and practice: Week 9 CAT 2",
+                    "options": [],
+                    "answer": null,
+                    "reference_url": "https://www.geeksforgeeks.org/courses/category/trending-technologies/"
+                }
+            ]
+        },
+        {
+            "week": 10,
+            "topic": "Week 10 Backtracking: General method, Applications- n-queue problem, Sum of subsets problem, Graph coloring, Hamiltonian cycles.",
+            "questions": [
+                {
+                    "type": "practice",
+                    "source": "GeeksforGeeks",
+                    "question": "Read and practice: Week 10 Backtracking: General method, Applications- n-queue problem, Sum of subsets problem, Graph coloring, Hamiltonian cycles.",
+                    "options": [],
+                    "answer": null,
+                    "reference_url": "https://www.geeksforgeeks.org/aptitude/puzzles/"
+                }
+            ]
+        },
+        {
+            "week": 11,
+            "topic": "Week11 Branch and Bound: General method, applications- Travelling sales person problem, 0/1 Knapsack problem- LC branch and Bound solution, FIFO branch and Bound solution.",
+            "questions": [
+                {
+                    "type": "practice",
+                    "source": "GeeksforGeeks",
+                    "question": "Read and practice: Week11 Branch and Bound: General method, applications- Travelling sales person problem, 0/1 Knapsack problem- LC branch and Bound solution, FIFO branch and Bound solution.",
+                    "options": [],
+                    "answer": null,
+                    "reference_url": "https://www.geeksforgeeks.org/courses/category/cloud-devops"
+                }
+            ]
+        },
+        {
+            "week": 12,
+            "topic": "Week 12 NP-Hard and NP-Complete Problems: Basic concepts, Non deterministic algorithms, NP-Hard and NPComplete classes, NP-Hard problems, Cook’s theorem.",
+            "questions": [
+                {
+                    "type": "practice",
+                    "source": "GeeksforGeeks",
+                    "question": "Read and practice: Week 12 NP-Hard and NP-Complete Problems: Basic concepts, Non deterministic algorithms, NP-Hard and NPComplete classes, NP-Hard problems, Cook’s theorem.",
+                    "options": [],
+                    "answer": null,
+                    "reference_url": "https://www.geeksforgeeks.org/aptitude/aptitude-questions-and-answers/"
+                }
+            ]
+        },
+        {
+            "week": 13,
+            "topic": "Week 13 EXAMS",
+            "questions": [
+                {
+                    "type": "practice",
+                    "source": "GeeksforGeeks",
+                    "question": "Read and practice: Week 13 EXAMS",
+                    "options": [],
+                    "answer": null,
+                    "reference_url": "https://www.geeksforgeeks.org/courses/category/trending-technologies/"
+                }
+            ]
+        },
+        {
+            "week": 14,
+            "topic": "Week 14 EXAMS",
+            "questions": [
+                {
+                    "type": "practice",
+                    "source": "GeeksforGeeks",
+                    "question": "Read and practice: Week 14 EXAMS",
+                    "options": [],
+                    "answer": null,
+                    "reference_url": "https://www.geeksforgeeks.org/aptitude/interview-corner/"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "course_code": "COMP 302/SOEN 302",
+    "course_name": "Design and analysis of algorithms",
+    "prerequisite": "COMP 301",
+    "credit_hours": "3.0",
+    "lecturer": "Catherine Wangari",
+    "email": "wangari.catherine@kisiiuniversity.ac.ke",
+    "purpose": "To introduce the students to Algorithms Analysis and Design Techniques.",
+    "objectives": "At the end of the course, students should be able to: Analyze and Design Algorithms, compare the performance of Algorithms.",
+    "weekly_topics": [
+        "Week 1 Introduction: Algorithms, Pseudo code for expressing algorithms.",
+        "Week 2 Performance analysis- Space complexity, Time Complexity, Asymptotic notation- Big oh notation, omega notation, theta notation and little oh notation.",
+        "Week 3 Divide and Conquer: General method. Applications- Binary search, Quick sort, merge sort, Strassen\u2019s matrix multiplication.",
+        "Week 4 Disjoint set operations, Union and Find algorithms, AND/OR graphs, Connected components, Bi-connected components.",
+        "Week 5 CAT 1",
+        "Week 6 Greedy method: General method, applications- Job sequencing with deadlines, Knapsack problem, Spanning trees, Minimum cost spanning trees, Single source shortest path problem.",
+        "Week 7 Dynamic Programming: General method, applications- Matrix chained multiplication, Optimal binary search trees, 0/1 Knapsack problem.",
+        "Week 8 All pairs shortest path problem, Traveling sales person problem, Reliability design.",
+        "Week 9 CAT 2",
+        "Week 10 Backtracking: General method, Applications- n-queue problem, Sum of subsets problem, Graph coloring, Hamiltonian cycles.",
+        "Week11 Branch and Bound: General method, applications- Travelling sales person problem, 0/1 Knapsack problem- LC branch and Bound solution, FIFO branch and Bound solution.",
+        "Week 12 NP-Hard and NP-Complete Problems: Basic concepts, Non deterministic algorithms, NP-Hard and NPComplete classes, NP-Hard problems, Cook\u2019s theorem.",
+        "Week 13 EXAMS",
+        "Week 14 EXAMS"
+    ],
+    "assessment": "Course work (Assessments and tests) 30%\nFinal Examination 70%\nTotal 100%",
+    "core_reading": "i. McConnell J. (2007), Analysis of Algorithms (2nd Ed.). Jones & Bartlett Learning",
+    "references": "Robert S. &Wayne K. (2011), Algorithms (4th Ed.). Addison-Wesley Professional"
+}

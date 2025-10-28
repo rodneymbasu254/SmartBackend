@@ -1,0 +1,16 @@
+{
+    "timestamp": "2025-10-28 16:42:38",
+    "total_weeks": 1,
+    "metrics": {
+        "average_score": 50.0,
+        "best_week": "1",
+        "worst_week": "1",
+        "exam_readiness": 50.0,
+        "week_trend": {
+            "1": 50.0
+        }
+    },
+    "raw_data": {
+        "1": 50.0
+    }
+}
