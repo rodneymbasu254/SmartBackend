@@ -5,45 +5,63 @@ SmartLearningAI - AI Research Assistant
 Helps students research assignment or CAT questions.
 Fetches, summarizes, and highlights key educational content
 from multiple sources, returning a structured result.
+
+Optimized for Render: lightweight summarization via Hugging Face API.
 """
 
-import requests, re, random
+import os
+import re
+import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
+from dotenv import load_dotenv
 
-# Optional summarizer (use OpenAI if available)
-try:
-    from transformers import pipeline
-    summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
-except Exception:
-    summarizer = None
+load_dotenv()
 
 
-# ----------------------------------------------------------
-# 🔹 Utility functions
-# ----------------------------------------------------------
+# ==========================================================
+# 🔹 Hugging Face API Configuration
+# ==========================================================
+HF_API_KEY = os.getenv("HUGGINGFACE_API_KEY")
+HF_SUMMARY_URL = "https://api-inference.huggingface.co/models/facebook/bart-large-cnn"
 
-def clean_text(text):
+
+# ==========================================================
+# 🔹 Utility Functions
+# ==========================================================
+def clean_text(text: str) -> str:
+    """Clean up whitespace and extra characters."""
     text = re.sub(r'\s+', ' ', text)
     return text.strip()
 
 
-def summarize_text(text, max_sentences=3):
-    """Uses transformer summarizer if available, else truncates text."""
+def summarize_text(text: str, max_sentences: int = 3) -> str:
+    """Summarize text using Hugging Face API or fallback method."""
     if not text:
         return ""
-    if summarizer:
-        summary = summarizer(text, max_length=120, min_length=40, do_sample=False)
-        return summary[0]["summary_text"]
-    # fallback simple heuristic
+
+    # --- Hugging Face Summarization ---
+    if HF_API_KEY:
+        try:
+            headers = {"Authorization": f"Bearer {HF_API_KEY}"}
+            payload = {"inputs": text, "parameters": {"max_length": 120, "min_length": 40}}
+            res = requests.post(HF_SUMMARY_URL, headers=headers, json=payload, timeout=15)
+            if res.status_code == 200:
+                data = res.json()
+                if isinstance(data, list) and "summary_text" in data[0]:
+                    return clean_text(data[0]["summary_text"])
+        except Exception as e:
+            print(f"[WARN] Summarizer failed: {e}")
+
+    # --- Fallback: simple heuristic ---
     sentences = text.split(". ")
     return ". ".join(sentences[:max_sentences]) + "..."
 
 
-# ----------------------------------------------------------
-# 🔹 Wikipedia fetch
-# ----------------------------------------------------------
-def fetch_wikipedia(query):
+# ==========================================================
+# 🔹 Wikipedia Fetch
+# ==========================================================
+def fetch_wikipedia(query: str):
     try:
         url = f"https://en.wikipedia.org/api/rest_v1/page/summary/{query.replace(' ', '_')}"
         r = requests.get(url, timeout=5)
@@ -61,10 +79,10 @@ def fetch_wikipedia(query):
     return None
 
 
-# ----------------------------------------------------------
-# 🔹 GeeksforGeeks fetch
-# ----------------------------------------------------------
-def fetch_gfg(query):
+# ==========================================================
+# 🔹 GeeksforGeeks Fetch
+# ==========================================================
+def fetch_gfg(query: str):
     try:
         search = "+".join(query.split())
         url = f"https://www.geeksforgeeks.org/search/?q={search}"
@@ -85,10 +103,10 @@ def fetch_gfg(query):
     return None
 
 
-# ----------------------------------------------------------
-# 🔹 Coursera fetch (course title only)
-# ----------------------------------------------------------
-def fetch_coursera(query):
+# ==========================================================
+# 🔹 Coursera Fetch
+# ==========================================================
+def fetch_coursera(query: str):
     try:
         search = "+".join(query.split())
         url = f"https://www.coursera.org/search?query={search}"
@@ -107,10 +125,10 @@ def fetch_coursera(query):
     return None
 
 
-# ----------------------------------------------------------
+# ==========================================================
 # 🔹 Google Books API
-# ----------------------------------------------------------
-def fetch_books(query):
+# ==========================================================
+def fetch_books(query: str):
     try:
         url = f"https://www.googleapis.com/books/v1/volumes?q={query}"
         data = requests.get(url, timeout=5).json()
@@ -127,15 +145,24 @@ def fetch_books(query):
         return []
 
 
-# ----------------------------------------------------------
-# 🔹 YouTube API (requires API key)
-# ----------------------------------------------------------
-def fetch_youtube(query, api_key=None):
+# ==========================================================
+# 🔹 YouTube Fetch (requires API key)
+# ==========================================================
+def fetch_youtube(query: str, api_key: str = None):
     if not api_key:
+        api_key = os.getenv("YOUTUBE_API_KEY")
+    if not api_key:
+        print("[WARN] No YouTube API key found.")
         return []
     try:
         url = "https://www.googleapis.com/youtube/v3/search"
-        params = {"part": "snippet", "q": query, "key": api_key, "maxResults": 3, "type": "video"}
+        params = {
+            "part": "snippet",
+            "q": query,
+            "key": api_key,
+            "maxResults": 3,
+            "type": "video"
+        }
         res = requests.get(url, params=params, timeout=5).json()
         results = []
         for item in res.get("items", []):
@@ -148,10 +175,11 @@ def fetch_youtube(query, api_key=None):
         return []
 
 
-# ----------------------------------------------------------
+# ==========================================================
 # 🔹 Main Research Function
-# ----------------------------------------------------------
-def research_topic(query, youtube_key=None):
+# ==========================================================
+def research_topic(query: str, youtube_key: str = None):
+    """Collects, summarizes, and compiles information from multiple educational sources."""
     print(f"[INFO] Researching: {query}")
 
     results = []
@@ -176,9 +204,9 @@ def research_topic(query, youtube_key=None):
     }
 
 
-# ----------------------------------------------------------
-# 🔹 Example run
-# ----------------------------------------------------------
+# ==========================================================
+# 🔹 Example Run (Local)
+# ==========================================================
 if __name__ == "__main__":
     topic = input("Enter your assignment or CAT question: ")
     output = research_topic(topic)
